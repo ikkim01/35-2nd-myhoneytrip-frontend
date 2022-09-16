@@ -34,16 +34,8 @@ https://user-images.githubusercontent.com/99232122/184281715-92bcc9a4-fe11-4405-
 
 <http://2nd-myhoneytrip.s3-website.ap-northeast-2.amazonaws.com/>
 
-#### 1. 카카오 로그인 API  
-- useEffect를 활용한 인가코드 발급을 서버로 전달 (FE 구단희)  
 
-#### 2. 메인 페이지. 
-- Slick library를 활용한 Carousel (FE 구단희). 
-- Search Bar 클릭 시 모달 및 달력 모달창 library 구현 (FE 이강철)  
-- 최근 검색 결과 상위 배너로 노출 (FE 이강철)  
-- mock data로 호출한 추천상품 노출 (FE 이강철)  
-
-####  3. 검색 상품 리스트 페이지
+####  1. 검색 상품 리스트 페이지
 - 데이터를 불러오기 전 로딩페이지 구현 (FE 김익현) 
 <img width="1354" alt="스크린샷 2022-08-14 오후 7 33 51" src="https://user-images.githubusercontent.com/101634412/184532977-602171c4-ec29-4fbe-847c-69f9da4b0a22.png">
   메인페이지로 부터 navigate('',state: {출발,도착데이터})로 넘겨받은 데이터를 location.state를 활용해 로딩될 동안 지루 할 수 있는 페이지를 보다 활동적으로 구현
@@ -52,12 +44,8 @@ https://user-images.githubusercontent.com/99232122/184281715-92bcc9a4-fe11-4405-
    const isData = Object.keys(flightData).length !== 0;
   if (!isData) return <Loading loadingData={loadingData} />;
   ```
-  
-- useLocation을 활용해 querystring을 받아와 서버 데이터 요청 (FE 신수정)  
-- selectbox를 통한 filter 기능 구현 (feat. searchParams) (FE 신수정)  
-- useNavtigate안에 데이터를 담아 다음 페이지로 전달 (FE 신수정)  
 
-#### 4. 구매 상품 확인 페이지  
+#### 2. 구매 상품 확인 페이지  
 <img width="1158" alt="스크린샷 2022-08-14 오후 7 40 22" src="https://user-images.githubusercontent.com/101634412/184533143-7d2a3077-9d52-4947-a486-e4fd257a5979.png">
 - useLocation을 활용해 이전 페이지에서 보내준 데이터 시각화 (FE 김익현)  
 
@@ -81,7 +69,7 @@ onClick={() =>
                 })
 ```
 
-#### 5. 탑승객 및 예약자 정보 입력 페이지
+#### 3. 탑승객 및 예약자 정보 입력 페이지
 ![2nd-myhoneytrip s3-website ap-northeast-2 amazonaws com_passengerdata](https://user-images.githubusercontent.com/101634412/184533211-7c0f898d-73bc-40a8-a400-f63d31ddaa53.png)
 
 - 가상의 배열을 만들어 탑승객 수만큼 입력 페이지 생성 (FE 김익현)  
@@ -111,7 +99,7 @@ Object.values(passengerData).map(object =>
 ```
 
 
-#### 6. 마이 페이지 - 예약확인 및 예약취소
+#### 4. 마이 페이지 - 예약확인 및 예약취소
 <img width="1066" alt="스크린샷 2022-08-14 오후 7 45 59" src="https://user-images.githubusercontent.com/101634412/184533286-9b24d40c-80b9-49f7-9ce7-613bde13e0d6.png">
 
 - 현재 탭에 따른 데이터 요청 예약취소 시 patch를 사용해 데이터 상태 변경 (FE 김익현)  
@@ -131,12 +119,6 @@ const cancelTravel = () => {
       );
   };
 ```
-
-#### 7. NAV 
-- 로그인/로그아웃 상태변경 및 마이페이지 이동 구현 (FE 구단희)  
- 
-#### 8. Footer
-- 상수데이터 활용하여 구성 (FE 구단희)  
 
 ### • 참고
 #####
